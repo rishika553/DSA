@@ -56,7 +56,20 @@ class Solution:
                 x.append(i)
         return x   
 
+#problem 7
+    def isPrime(self,n):
+        if n <= 1:
+            return False
 
+        count = 0
+        for i in range(1,n+1):
+            if n % i == 0:
+               count += 1
+
+        if count == 2:
+         return True
+
+        return False
 obj=Solution()
 print(obj.countDigit(590900009900))
 print(obj.reverse(89))
@@ -64,3 +77,4 @@ print(obj.isPalindrome(121))
 print(obj.GCD(24,56))
 print(obj.isArmstrong(153))
 print(obj.divisors(8))
+print(obj.isPrime(5))
